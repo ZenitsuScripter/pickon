@@ -7,7 +7,7 @@ _G.autoPickup = true;
 coroutine.wrap(function()
     while _G.autoPickup and lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") do wait()
         for i,v in pairs(ws:GetChildren()) do
-            if v.Name == "DropItem" and (v.Position - lp.Character.HumanoidRootPart.Position).magnitude <= 6.2 then
+            if v.Name == "DropItem" and (v.Position - lp.Character.HumanoidRootPart.Position).magnitude <= 10 then
                 rs.Remotes.Async:FireServer("Character", "Interaction", v);
             end
         end
